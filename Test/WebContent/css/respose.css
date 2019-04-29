@@ -1,0 +1,50 @@
+@charset "UTF-8";
+body{
+	background-color:#d6e6df;
+}
+
+.page-header{
+	color:#6b473c;
+	text-align:center;
+	font-family:Georgia;
+}
+
+.catalog{
+	margin-left:60px;
+	font-family:Times;
+	color:#905a3d;
+}
+
+.catalog a{
+	font-size:15px;
+}
+
+.catalog a:hover{
+	color:#bd6758;
+	font-size:30px;
+}
+
+.job_list{
+	border-style:none none none solid;
+	border-width:2px;
+
+}
+
+.job{
+	padding-left:100px;
+	padding-right:30px;
+	border-style:none none solid none;
+	border-color:#feeeed;
+	border-width:2px;
+}
+
+.job_description{
+	font-family:Times;
+	color:#ca8687;
+	font-size:25px;
+}
+
+#pager{
+	margin-left:40px;
+	margin-right:60px;
+}

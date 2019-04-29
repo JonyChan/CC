@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  
+  <servlet>
+  <servlet-name>LoginAction</servlet-name>
+  <servlet-class>Servlet.LoginAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginAction</servlet-name>
+  <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>RegistAction</servlet-name>
+  <servlet-class>Servlet.RegisterAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RegistAction</servlet-name>
+  <url-pattern>/regist</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>LoginCheckAction</servlet-name>
+  <servlet-class>Servlet.whetherLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginCheckAction</servlet-name>
+  <url-pattern>/loginCheck</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>LoginOutAction</servlet-name>
+  <servlet-class>Servlet.LoginOut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginOutAction</servlet-name>
+  <url-pattern>/loginOut</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>ValidAction</servlet-name>
+  <servlet-class>Servlet.mianbanksubmit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ValidAction</servlet-name>
+  <url-pattern>/BankMain</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>pwdResetAction</servlet-name>
+  <servlet-class>Servlet.pwdreset</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>pwdResetAction</servlet-name>
+  <url-pattern>/ResetPwd</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>newApp</servlet-name>
+  <servlet-class>Servlet.NewAppAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>newApp</servlet-name>
+  <url-pattern>/insertApp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>showapp</servlet-name>
+  <servlet-class>Servlet.ShowAppAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>showapp</servlet-name>
+  <url-pattern>/showApp</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>warUploadAction</servlet-name>
+  <servlet-class>Servlet.warUpload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>warUploadAction</servlet-name>
+  <url-pattern>/warUp</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

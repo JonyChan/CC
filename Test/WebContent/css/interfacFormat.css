@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.leftPart{
+	width: 50%;
+	font-family:Times;
+	color:#905a3d;
+	float:left;
+}
+
+
+.rightPart{
+	width: 48%;;
+	font-family:Times;
+	color:#905a3d;
+	float:left;
+}
+.catalog{
+	margin-left:100px;
+	font-family:Times;
+	color:#905a3d;
+}
