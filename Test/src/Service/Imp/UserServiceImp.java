@@ -109,4 +109,32 @@ public class UserServiceImp implements UserService{
 		}
 	}
 
+	@Override
+	public user selectOne(String name) {
+		// TODO Auto-generated method stub
+		user u = null;
+		Connection con = null;
+		
+		
+		try {
+			con = JdbcUtils.getConn();
+			con.setAutoCommit(false);
+			UserDao ud = new UserDaoImp();
+			u = ud.selectOne(name);
+			con.commit();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			try {
+				con.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}finally {
+			JdbcUtils.closeAll(con, null, null);
+		}
+		return u;
+	}
+
 }

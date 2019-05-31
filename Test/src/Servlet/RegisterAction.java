@@ -18,18 +18,16 @@ public class RegisterAction extends HttpServlet{
 		
 		String name = hsr.getParameter("abc");
 		String password = hsr.getParameter("xyz");
-		String major = hsr.getParameter("de");
+		
 		
 		
 		
 		UserService us = new UserServiceImp();
 
 			
-			user u = new user(name,password,major,"1500");
+			user u = new user(name,password,"100");
 			us.regist(u);
-//			System.out.println(u.getMoney());
-//			HttpSession session = hsr.getSession();
-//			session.setAttribute("bc", u.getMoney());
+
 			
 			hsr.getRequestDispatcher("/login.jsp").forward(hsr, hsrr);
 		}

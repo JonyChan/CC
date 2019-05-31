@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 import entity.user;
 
 import Dao.UserDao;
@@ -53,13 +54,12 @@ public class UserDaoImp implements UserDao {
 		PreparedStatement ps = null;
 		try {
 			Connection conn = JdbcUtils.getConn();
-			String sql = "insert into user values(?,?,?,?)";
+			String sql = "insert into user values(?,?,?)";
 			ps = conn.prepareStatement(sql);
 			
 			ps.setString(1, u.getName());
 			ps.setString(2, u.getPassword());
-			ps.setString(3, u.getMajor());
-			ps.setString(4, u.getMoney());
+			ps.setString(3, u.getMoney());
 			
 			ps.executeUpdate();
 		} catch (SQLException e) {
@@ -110,6 +110,47 @@ public class UserDaoImp implements UserDao {
 		}finally {
 			JdbcUtils.closeAll(conn, ps, rs);
 		}
+	}
+
+	@Override
+	public user selectOne(String name) {
+		// TODO Auto-generated method stub
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		user u = null;;
+		
+		try {
+			conn = JdbcUtils.getConn();
+			String sql ="select * from user where name=?";
+			ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, name);
+			
+			
+			rs = ps.executeQuery();
+			if(rs.next()){
+				u=new user();
+				u.setName(rs.getString("name"));
+				u.setPassword(rs.getString("password"));
+				u.setMoney(rs.getString("money"));
+//				f.setLaunch(rs.getString("launch"));
+//				f.setLand(rs.getString("land"));
+//				f.setName(rs.getString("name"));
+//				f.setLength(rs.getString("length"));
+//				f.setPrice(rs.getInt("price"));
+
+			}	
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			JdbcUtils.closeAll(conn, ps, rs);
+		}
+		return u;
 	}
 
 }

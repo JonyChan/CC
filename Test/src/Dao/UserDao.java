@@ -11,4 +11,6 @@ public interface UserDao {
 	public user selectByName(String name);
 	
 	public void changePassword(user u);
+	
+	public user selectOne(String name);
 }

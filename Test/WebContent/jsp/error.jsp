@@ -52,8 +52,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- Slideshow -->
-  <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
-
+<!--   <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
+ -->
+ <img src="/Test/image/Diamond.jpg" width="100%" height="auto"/>
 </body>
 
 </html>
@@ -67,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><a href="/Test/login.jsp">please login again</a></span>
     </div>
   <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>About us</h4>
+  <h4><a href = "./aboutUs.jsp">About us</a></h4>
   <h6>Team member: JinKun Li, Xu Chen, ShengQi Li, ShiQi Yan</h6>
   
   

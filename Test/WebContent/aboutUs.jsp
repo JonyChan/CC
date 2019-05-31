@@ -5,7 +5,6 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -16,14 +15,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-    .mySlides {display:none}
-    .w3-tag, .fa {cursor:pointer}
-    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+  .bgimg { 
+  position: relative;
+    min-height: 100%;
+    background: url(./image/Diamond.jpg) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
     </style>
 <body style="text-decoration:none">
   <!-- Links (sit on top) -->
-<div class="w3-top">
+<%-- <div class="w3-top">
   <div class="w3-row w3-large w3-light-grey">
     <div class="w3-col s3">
       <a href="/Test/showApp" class="w3-button w3-block">Home</a>
@@ -52,102 +59,115 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
   </div>
 </div>
-
+ --%>
 </head>
 
 <!-- Content -->
-<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
-
-  <div class="w3-panel">
+<div class="w3-content" style="max-width:100%;margin-top:80px;margin-bottom:80px">
+ 
     <h1><b>Sheffield CloudBase</b></h1>
     <p>Platform-as-a-Service</p>
+    <img src="./image/Diamond1.jpg" width="100%" height="auto"/>
   </div>
   
   
   <!-- Slideshow -->
-  <img src="./image/Diamond.jpg" width="1100" height="500"/>
-    
-<!--
-<section class="w3-container w3-padding">
-    <div class="w3-row">
-        <a class="w3-btn w3-round-large w3-blue" href="not-yet-linked">Button 1</a>
-        <a class="w3-btn w3-round-large w3-indigo" href="not-yet-linked">Button 2</a>
-        <a class="w3-btn w3-round-large w3-purple" href="not-yet-linked">Button 3</a>
-        <a class="w3-btn w3-round-large w3-red" href="not-yet-linked">Button 4</a>
-        <a class="w3-btn w3-round-large w3-yellow" href="not-yet-linked">Button 5</a>
-        <a class="w3-btn w3-round-large w3-teal" href="not-yet-linked">Button 6</a>
+ 
+
+
+<div class="table_grad scroll_tablex">
+<div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Our Platform</span>
     </div>
-</section>
--->
+  <table class="table_tab responsive"border="1"cellspacing="0"align="center" style="text-align:left; font-size:14px; font-weight:bold; width:80%; height:100px;text-align:center">
+<tr>
+<th>Name</th>
+<td>Sheffield CloudBase</td>
+
+</tr>
+<tr>
+<th>Aim objectives</th>
+<td>Students in the University of Sheffield</td>
+
+</tr>
+<tr>
+<th>Theme</th>
+<td>Learn Support</td>
+
+</tr>
+<tr>
+<th>Designer</th>
+<td>Xu Chen, Jinkun Li, Shiqi Yan, Shengqi Li</td>
+
+</tr>
+<tr>
+<th>Email: </th>
+<td>sli40@sheffield.ac.uk</td>
+  </tr>
+  
+  
+  </table>
+</div>
 
 
-    <h1>Our platform</h1>
-    <section class="platformIntroduction">
 
+<div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Developers!</span>
+    </div>
 
-        <table class="aaa">
-            <tr>
-                <th class="bbb">Name</th>
-                <td class="ccc">Sheffield CloudBase</td>
-            </tr>
-            <tr>
-                <th class="bbb">Aim objectives</th>
-                <td class="ccc">Students in the University of Sheffield</td>
-            </tr>
-            <tr>
-                <th class="bbb">Purpose</th>
-                <td class="ccc">ddddd</td>
-            </tr>
-            <tr>
-                <th class="bbb">Designer</th>
-                <td class="ccc">Designer1, Designer2, Designer3, Designer4</td>
-            </tr>
-            <tr>
-                <th class="bbb">Email: </th>
-                <td class="ccc">GaoZhiLiang@youxiu.com</td>
-            </tr>
+    
+    <div class="w3-quarter w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="./image/logo.png" alt="" style="width:50%; height:50%">
+        <div class="w3-container">
+          <h3>Name: <span>Shiqi Yan</span></h3>
+          <p>Subject: <span>Information System</span></p>
+          <p>Email: <span>syan8@sheffield.ac.uk</span></p>      
+        </div>
+      </div>
+    </div>
+    <div class="w3-quarter w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="./image/logo.png" alt="" style="width:50%">
+        <div class="w3-container">
+          <h3>Name: <span>Xu Chen</span></h3>
+          <p>Subject: <span>Advanced Computer Science</span></p>
+          <p>Email: <span>xchen116@sheffield.ac.uk</span></p>      
+        </div>
+      </div>
+    </div>
+    <div class="w3-quarter w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="./image/logo.png" alt="" style="width:50%">
+        <div class="w3-container">
+          <h3>Name: <span>Jinkun Li</span></h3>
+          <p>Subject: <span>Advanced Computer Science</span></p>
+          <p>Email: <span>jli169@sheffield.ac.uk</span></p>    
+        </div>
+      </div>
+    </div>
+    <div class="w3-quarter w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="./image/logo.png" alt="" style="width:50%">
+        <div class="w3-container">
+           <h3>Name: <span>Shengqi Li</span></h3>
+          <p>Subject: <span>Information System</span></p>
+          <p>Email: <span>sli40@sheffield.ac.uk</span></p>    
+        </div>
+      </div>
+    </div>
+    </div>
 
-        </table>
-
-
-    </section>
+    
+    
 <div class="black">
     </br></br></br></br>
 
 
 </div>
 
-<section class="Author">
-    <div class='table'>
-        <div class='tr'>
-            <div class='td'><img src="./image/logo.png" alt="" /></div>
-            <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-            <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-            <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-        </div>
 
-        <div class='tr'>
-        <div class='td'><img src="./image/logo.png" alt="" /></div>
-        <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-        <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-        <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-    </div>
-        <div class='tr'>
-            <div class='td'><img src="./image/logo.png" alt="" /></div>
-            <div class='td'>Name:</br>Subject: </br>Birth: </br></div>
-            <div class='td'>Subject: </br>Birth: </br></div>
-            <div class='td'>Subject: </br>Birth: </br></div>
-            
-            
-        </div>
-        <div class='tr'>
-            <div class='td'><img src="./image/logo.png" alt="" /></div>
-            <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-            <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-            <div class='td'>Name: </br>Subject: </br>Birth: </br></div>
-        </div>
-    </div>
-</section>
 <div class="black">
     </br></br></br></br>
 

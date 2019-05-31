@@ -4,7 +4,6 @@ public class user {
 
 	private String name;
 	private String password;
-	private String major;
 	private String money;
 	
 	public user() {
@@ -12,11 +11,10 @@ public class user {
 		// TODO Auto-generated constructor stub
 	}
 
-	public user(String name, String password, String major, String money) {
+	public user(String name, String password, String money) {
 		super();
 		this.name = name;
 		this.password = password;
-		this.major = major;
 		this.money = money;
 	}
 	
@@ -42,13 +40,6 @@ public class user {
 		this.password = password;
 	}
 
-	public String getMajor() {
-		return major;
-	}
-
-	public void setMajor(String major) {
-		this.major = major;
-	}
 
 	public String getMoney() {
 		return money;
@@ -60,8 +51,7 @@ public class user {
 
 	@Override
 	public String toString() {
-		return "user [name=" + name + ", password=" + password + ",  major=" + major
-				+ ", money=" + money + "]";
+		return "user [name=" + name + ", password=" + password + ", money=" + money + "]";
 	}
 	
 	

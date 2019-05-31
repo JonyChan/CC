@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="w3-top">
   <div class="w3-row w3-large w3-light-grey">
     <div class="w3-col s3">
-      <a href="/Test/loginCheck" class="w3-button w3-block">Home</a>
+      <a href="/Test/showApp" class="w3-button w3-block">Home</a>
     </div>
     <div class="w3-col s3 ">
       <a href="login.jsp" class="w3-button w3-block">Account</a>     
@@ -53,8 +53,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- Slideshow -->
-  <img src="./image/Diamond.jpg" width="1100" height="300"/>
-
+<!--   <img src="./image/Diamond.jpg" width="1100" height="300"/>
+ -->
+ <img src="./image/Diamond.jpg" width="100%" height="auto"/>
 
 <section>
 
@@ -66,20 +67,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <form action="/Test/login" method="post" align = "center">
     <table align = "center">
     <tr>
-    <td>name</td>
+    <td>User Name:</td>
     </tr>
      <tr>
-     <td><input type="text" name = "abc"></td>
+     <td><input type="text" name = "abc" ></td>
     </tr>
      <tr>
-    <td>password</td>
+    <td>Password:</td>
      </tr>
     <tr>
-     <td><input type="password" name = "xyz"></td>
+     <td><input type="password" name = "xyz"  ></td>
     </tr>
     
     <tr>
-     <td><input type="submit" value = "login"></td>
+     <td><input class="w3-button w3-dark-grey" type="submit" value = "login"></td>
     </tr>
     <tr>
     <td><a href="/Test/regist.jsp">New user, regist now</a></td>
@@ -98,7 +99,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </section>
 
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>About us</h4>
+  <h4><a href = "./aboutUs.jsp">About us</a></h4>
   <h6>Team member: JinKun Li, Xu Chen, ShengQi Li, ShiQi Yan</h6>
   
   

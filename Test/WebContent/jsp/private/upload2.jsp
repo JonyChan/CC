@@ -20,6 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     .mySlides {display:none}
     .w3-tag, .fa {cursor:pointer}
     .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    td{padding:5px 10px; width:35%;}
     </style>
 <body style="text-decoration:none">
   <!-- Links (sit on top) -->
@@ -52,17 +53,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- Slideshow -->
-  <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
-    
+<!--   <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
+ -->    
+ <img src="/Test/image/Diamond.jpg" width="100%" height="auto"/>
 <section>
 	
 	<h1 align="center"> ${message }</h1>
     <br/>
     <h1 align="center">Upload specific information of app here!</h1>
 
-    <div class="catalog">  
+    <div class="w3-row-padding">  
       <form action="/Test/insertApp" method="post" >
-      <table align = "center">
+      <table align = "center" style="width:80%;">
     <!--  <tr>
       <td><h3>Please choose WAR file as app:</h3></td>
       </tr>
@@ -78,34 +80,42 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <input type="file" name="iconpath" size="50" /></td>
 
 </tr> -->
-<br/>
+
 <tr>
         <td>Application name:</td>
-        <br/>
-        <td><input type="text" name="appname"size="60"/></td>
+        
+        <td><input style="width:100%;" type="text" name="appname" placeholder = "please input 'app1' if 'app1.war',this is the name of your war document" required/></td>
 </tr>
-<br/>
+
+
 <tr>        
          <td>Provider name:</td>
-         <br/>
-        <td><input type="text" name="provider"size="60"/></td>
+         
+        <td><input style="width:100%;" type="text" name="provider" placeholder = "<%=session.getAttribute("abc") %>" required/></td>
 </tr>
-<br/>
+
 <tr>
         <td>Introduction of your application:</td>
-        <br/>
-        <td><textarea rows="6" cols="60" name = "appdescri" placeholder = "Detail your app"></textarea></td>
+        
+        <td><textarea  style="width:100%;" name = "appdescri" placeholder = "introduction of your app, this will show in the platform"></textarea></td>
 </tr>
-<br/>
+
 <tr>
         <td>Service agreement:</td>
-        <br/>
-        <td><textarea rows="6" cols="60" placeholder = "contents"></textarea></td>
+        
+        <td><p style="width:100%;margin:auto;">1.Once uploading apps to the platform, the platform has the right to review and delete apps.</p>
+        	<p style="width:100%;margin:auto;">2.Once Releasing apps, it is not allow app providers update and delete those apps privitely.</p>
+        	<p style="width:100%;margin:auto;">3.Update yours apps, please contact platform administrator. Contact information is available in Abput Us.</p>
+        	<p style="width:100%;margin:auto;">4.After you uploading your app, when other user enter your app, you could get 3 peanuts each time, the platform could get 2 peanuts each time.</p>
+        	<p style="width:100%;margin:auto;">5.Earnings details can be viewed in the Wallet.</p>
+        	<p style="width:100%;margin:auto;">6.Apps provider would not be charged, only when enter their own apps.</p>
+        	<p style="width:100%;margin:auto;">6.Once you continue to the next step, you will be deemed to accept our agreement by default.</p>
+        </td>
 </tr>
 <br/>
 
 <tr>
-        <td align = "center"><input type="submit" value="create" /></td>
+        <td align = "center"><input class="w3-button w3-dark-grey" type="submit" value="create" /></td>
         </tr>
         </table>
         </form>
@@ -120,7 +130,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </section>
 
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>About us</h4>
+  <h4><a href = "./aboutUs.jsp">About us</a></h4>
   <h6>Team member: JinKun Li, Xu Chen, ShengQi Li, ShiQi Yan</h6>
   
   

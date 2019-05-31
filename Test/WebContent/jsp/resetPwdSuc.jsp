@@ -81,10 +81,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- Slideshow -->
-  <img src="./image/Diamond.jpg" width="1100" height="500"/>
-    
-<p align = "center"><h1>Reset failure!</h1></p>
-<a href="/Test/resetPwd.jsp"><h3>Click here and reset again:</h3></a>
+<!--   <img src="./image/Diamond.jpg" width="1100" height="500"/>
+ -->    
+ <img src="./image/Diamond.jpg" width="100%" height="auto"/>
+<section align = center"">
+
+<p><h1 align = "center">Reset Success</h1></p>
+<a href="/Test/showApp"><h3 align = "center">Click here return to platform:</h3></a>
+</center>
+</section>
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
   <h4><a href = "./aboutUs.jsp">About us</a></h4>
   <h6>Team member: JinKun Li, Xu Chen, ShengQi Li, ShiQi Yan</h6>

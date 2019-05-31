@@ -22,12 +22,9 @@ import Service.CDKService;
 import Service.NameCheckService;
 import Service.Imp.CDKServiceImp;
 import Service.Imp.NameCheckServiceImp;
+import Utils.JdbcUtils;
 
 public class mianbanksubmit extends HttpServlet{
-	
-
-	
-		
 
 		 protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 			 
@@ -46,19 +43,10 @@ public class mianbanksubmit extends HttpServlet{
 					//session.setAttribute("cde", cdk);//
 					req.getRequestDispatcher("/jsp/bank/sucessremind.jsp").forward(req, res);
 					
-					try {  
-				         Class.forName("com.mysql.jdbc.Driver");     
-				         System.out.println("Success loading Mysql Driver!");  
-				        }  
-				        catch (Exception e) {  
-				          System.out.print("Error loading Mysql Driver!");  
-				          e.printStackTrace();  
-				        }
 					
 					
 					try {  
-				          Connection connect = DriverManager.getConnection(  
-				              "jdbc:mysql://localhost:3306/cc","root","123456");  
+				          Connection connect = JdbcUtils.getConn();  
 				             
 				      
 				          System.out.println("Success connect Mysql server!");  
@@ -79,15 +67,14 @@ public class mianbanksubmit extends HttpServlet{
 				        }  
 					
 				        try {  
-				          Connection connect = DriverManager.getConnection(  
-				              "jdbc:mysql://localhost:3306/cc","root","123456");  
+				          Connection connect = JdbcUtils.getConn(); 
 				               
 				          String sql1 = "update user set money='" + ba + "' where name='" + username + "'";
 				          PreparedStatement pstmt1;                                                       
 				          pstmt1 = (PreparedStatement) connect.prepareStatement(sql1);
 				          int i =pstmt1.executeUpdate();
 							if(i>0){
-								req.getSession().setAttribute("bc", ba);
+								req.getSession().setAttribute("mo", ba);
 								System.out.println("update sucess");
 							}
 
@@ -109,8 +96,7 @@ public class mianbanksubmit extends HttpServlet{
 				        String sql2 = "delete from cdklist where cdk='" + cdk + "'";
 				        PreparedStatement pstmt;
 				        try {
-				        	Connection conn = DriverManager.getConnection(  
-						              "jdbc:mysql://localhost:3306/cc","root","123456");
+				        	Connection conn = JdbcUtils.getConn();
 				            pstmt = (PreparedStatement) conn.prepareStatement(sql2);
 				            i = pstmt.executeUpdate();
 				            System.out.println("resutl: " + i);

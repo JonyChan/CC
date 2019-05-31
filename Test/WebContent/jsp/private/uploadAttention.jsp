@@ -20,7 +20,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     .mySlides {display:none}
     .w3-tag, .fa {cursor:pointer}
     .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
-    .container{margin:2em;}
     </style>
 <body style="text-decoration:none">
   <!-- Links (sit on top) -->
@@ -30,13 +29,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <a href="/Test/showApp" class="w3-button w3-block">Home</a>
     </div>
     <div class="w3-col s3 ">
-      <a href="login.jsp" class="w3-button w3-block">Account</a>     
+      <a href="/Test/jsp/LoginSuc.jsp" class="w3-button w3-block"><%=session.getAttribute("abc")%></a>     
     </div>
     <div class="w3-col s3">
-      <a href="login.jsp" class="w3-button w3-block">Wallet</a>
+      <a 
+      href="/Test/jsp/bank/wallet.jsp" class="w3-button w3-block">Wallet</a>
     </div>
     <div class="w3-col s3">
-      <a href="login.jsp" class="w3-button w3-block">Upload</a>
+      <a href="/Test/jsp/private/upload.jsp" class="w3-button w3-block">Upload</a>
     </div>
   </div>
 </div>
@@ -51,44 +51,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <p>Platform-as-a-Service</p>
   </div>
   
- 
+  
   <!-- Slideshow -->
-<!--   <img src="./image/Diamond.jpg" width="1100" height="300"/>
+<!--   <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
  -->
-<img src="./image/Diamond.jpg" width="100%" height="auto"/>
+ <img src="/Test/image/Diamond.jpg" width="100%" height="auto"/>
 
+
+
+    <h1 align="center">Upload Attention</h1>
+
+       
+<body>
+    
+ 
 <section>
-<div>
-
-    <h1 align="center">Register Page</h1>
-
-    <div class="catalog container">
-          <form action="/Test/regist">
-          <table>
-            <p align="left">User Name:</p>
-            <p align="left"><input type="text" name = "abc" size="50"  placeholder = "when you login, you will use username" required/></p>
-           
-            <p align="left">Password: </p>
-            <p align="left"><input type="password" name="xyz"size="50"  placeholder = "when you login, you will use password" required/></p>
+	<p><h3>To ensure the uploading successfully, you must follow below requirement:</h3></br>
+	1. The app should be packaged as "XXX.war" format.<br/>
+	2. The app should include an "index.jsp", which work as an open page</br>
+	3. When you upload your app, there are two steps you should complete. You must follow the order, upload your app, and then fill extra information.<br/>
+	4. The application name must be "XXX", which is the war document name.<br/>
+	5. Your provider name should be the username.<br/>
+	6. If you want to get the user information, you can use "session.getAtribute("abc")" to get name, and use "session.getAtribute("bc")" to get balance.
+	
+	<br/>
+	</p>
 
 
-            <p align="left">Email:</p>
-            <p align="left"><input type="text" size="50"/></p>
-            
-
-
-            <p colspan="2"><input class="w3-button w3-dark-grey" type="submit" value="Regist"/></p>
-            </table>
-		</form>
-    </div>
-    </div>
 </section>
-
-
-
-
-<br/>
-
+ <h1 align="center">Return to the <a href = "upload.jsp">Upload page</a></h1>
 
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
   <h4><a href = "./aboutUs.jsp">About us</a></h4>
@@ -105,3 +96,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </body>
 
 </html>
+  
+

@@ -84,8 +84,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- Slideshow -->
-  <img src="./image/Diamond.jpg" width="1100" height="300"/>
-    
+<!--   <img src="./image/Diamond.jpg" width="1100" height="300"/>
+ -->    
+ <img src="/Test/image/Diamond.jpg" width="100%" height="auto"/>
     
 <section>
 <center>

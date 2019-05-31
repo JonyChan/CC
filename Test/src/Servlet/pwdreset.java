@@ -8,6 +8,7 @@ import javax.servlet.http.*;
 import Service.BankUserService;
 
 import Service.Imp.BankUserServiceImp;
+import Utils.JdbcUtils;
 
 public class pwdreset extends HttpServlet{
 	
@@ -29,7 +30,7 @@ public class pwdreset extends HttpServlet{
 		if(infocomparing) {
 			//HttpSession session = req.getSession();
 			//session.setAttribute("cde", cdk);//
-			req.getRequestDispatcher("/resetPwdSuc.jsp").forward(req, res);
+			req.getRequestDispatcher("/jsp/resetPwdSuc.jsp").forward(req, res);
 			
 			try {  
 		         Class.forName("com.mysql.jdbc.Driver");     
@@ -40,8 +41,7 @@ public class pwdreset extends HttpServlet{
 		          e.printStackTrace();  
 		        }  
 		        try {  
-		          Connection connect = DriverManager.getConnection(  
-		              "jdbc:mysql://localhost:3306/cc","root","123456");  
+		          Connection connect = JdbcUtils.getConn();  
 		               
 		          String sql = "update user set password ='" + npwd + "' where name='" + username + "'";
 		          PreparedStatement pstmt;                                                       
@@ -66,7 +66,7 @@ public class pwdreset extends HttpServlet{
 			
 			
 		}else {
-			req.getRequestDispatcher("/resetPwdFail.jsp").forward(req, res);
+			req.getRequestDispatcher("/jsp/resetPwdFail.jsp").forward(req, res);
 			
 		      }  
 		}

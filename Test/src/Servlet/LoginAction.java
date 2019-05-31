@@ -19,7 +19,7 @@ public class LoginAction extends HttpServlet{
 		String name = hsr.getParameter("abc");
 		String password = hsr.getParameter("xyz");
 		user u = new user(name,password);
-		
+		System.out.println(u.getMoney());
 		UserService us = new UserServiceImp();
 		boolean loginSuc = us.login(name, password);
 		if(loginSuc) {

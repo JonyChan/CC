@@ -60,8 +60,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- Slideshow -->
-  <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
-  
+  <!-- <img src="/Test/image/Diamond.jpg" width="1100" height="300"/> -->
+  <img src="/Test/image/Diamond.jpg" width="100%" height="auto"/>
   <body>
     <%-- <%=session.getAttribute("abc")%>,you login successfully<br/> --%>
     <!-- <a href="/Test/private/app1">看看全部的航班信息</a> -->
@@ -71,7 +71,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <br>
       <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"> <a href = "/Test/loginOut">Do you want to login out?</a><br/></span>
       <br>
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"> <a href="/Test/resetPwd.jsp">Do you want to change password?</a><br/></span>
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"> <a href="/Test/jsp/resetPwd.jsp">Do you want to change password?</a><br/></span>
       
       
     </div>
@@ -98,7 +98,7 @@ for(app a:list){
     <br></br> --%>
    </br>
   <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>About us</h4>
+  <h4><a href = "./aboutUs.jsp">About us</a></h4>
   <h6>Team member: JinKun Li, Xu Chen, ShengQi Li, ShiQi Yan</h6>
   
   

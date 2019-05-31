@@ -32,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <a href="/Test/jsp/LoginSuc.jsp" class="w3-button w3-block"><%=session.getAttribute("abc")%></a>     
     </div>
     <div class="w3-col s3">
-      <a href="/Test/jsp/private/wallet.jsp" class="w3-button w3-block">Wallet</a>
+      <a href="/Test/jsp/bank/wallet.jsp" class="w3-button w3-block">Wallet</a>
     </div>
     <div class="w3-col s3">
       <a href="/Test/jsp/private/upload.jsp" class="w3-button w3-block">Upload</a>
@@ -52,11 +52,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- Slideshow -->
-  <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
-    
+<!--   <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
+ -->    
+ <img src="/Test/image/Diamond.jpg" width="100%" height="auto"/>
 <section>
 
     <h1 align="center">Upload your app here!</h1>
+    
+    <p style="width: 70%;margin:auto;font-size:2em;">Before you upload your app, please read the tips <a href = "uploadAttention.jsp">here</a></p>
 
     <div class="catalog">  
       <form action="/Test/warUp" method="post" enctype="multipart/form-data">
@@ -65,10 +68,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <td><h3>Please choose WAR file as app:</h3></td>
       </tr>
       <tr>
-      <br/>
+    
       <td><input type="file" name="warpath" accept = ".war" size="50" /></td>
 </tr>
-<br/>
+
 <!-- <tr>
  	<td>Please choose picture as app icon:</td>
  	 <br/>
@@ -118,7 +121,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </section>
 
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>About us</h4>
+  <h4><a href = "./aboutUs.jsp">About us</a></h4>
   <h6>Team member: JinKun Li, Xu Chen, ShengQi Li, ShiQi Yan</h6>
   
   

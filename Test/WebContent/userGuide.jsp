@@ -20,26 +20,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     .mySlides {display:none}
     .w3-tag, .fa {cursor:pointer}
     .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
-    .container{margin:2em;}
     </style>
 <body style="text-decoration:none">
   <!-- Links (sit on top) -->
-<div class="w3-top">
+<%-- <div class="w3-top">
   <div class="w3-row w3-large w3-light-grey">
     <div class="w3-col s3">
       <a href="/Test/showApp" class="w3-button w3-block">Home</a>
     </div>
     <div class="w3-col s3 ">
-      <a href="login.jsp" class="w3-button w3-block">Account</a>     
+      <a href="/Test/jsp/LoginSuc.jsp" class="w3-button w3-block"><%=session.getAttribute("abc")%></a>     
     </div>
     <div class="w3-col s3">
-      <a href="login.jsp" class="w3-button w3-block">Wallet</a>
+      <a 
+      href="/Test/jsp/bank/wallet.jsp" class="w3-button w3-block">Wallet</a>
     </div>
     <div class="w3-col s3">
-      <a href="login.jsp" class="w3-button w3-block">Upload</a>
+      <a href="/Test/jsp/private/upload.jsp" class="w3-button w3-block">Upload</a>
     </div>
   </div>
-</div>
+</div> --%>
 
 </head>
 
@@ -51,44 +51,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <p>Platform-as-a-Service</p>
   </div>
   
- 
+  
   <!-- Slideshow -->
-<!--   <img src="./image/Diamond.jpg" width="1100" height="300"/>
+<!--   <img src="/Test/image/Diamond.jpg" width="1100" height="300"/>
  -->
-<img src="./image/Diamond.jpg" width="100%" height="auto"/>
+ <img src="/Test/image/Diamond.jpg" width="100%" height="auto"/>
 
+
+
+    <h1 align="center">User Guide</h1>
+
+       
+<body>
+    
+ 
 <section>
-<div>
-
-    <h1 align="center">Register Page</h1>
-
-    <div class="catalog container">
-          <form action="/Test/regist">
-          <table>
-            <p align="left">User Name:</p>
-            <p align="left"><input type="text" name = "abc" size="50"  placeholder = "when you login, you will use username" required/></p>
-           
-            <p align="left">Password: </p>
-            <p align="left"><input type="password" name="xyz"size="50"  placeholder = "when you login, you will use password" required/></p>
+	<h3 style="padding:0.5em;">Before enter our platform, please read these guides:</h3></br>
+	<p style="width:70%;margin:auto;">1. After you enter platform, please sign up a new account, otherwise(if you do not log in), you can not access our services.<br/>
+	2. After sign up a new account, you could get 100 peanuts</br>
+	3. Before you upload your app, please read the upload attention<br/>
+	4. If you are apps provider, please read UploadAttention and Upload Services agreement carefully before uploading.<br/>
+	5. After you signing in, when you enter an app, it will cost you 5 peanuts.<br/>
+	6. You could top up your peanuts, when you have correct CDK number, details in the Wallet.<br/>
+	7. You could see how many peanuts you have in the Wallet.
+	<br/>
+	</p>
 
 
-            <p align="left">Email:</p>
-            <p align="left"><input type="text" size="50"/></p>
-            
-
-
-            <p colspan="2"><input class="w3-button w3-dark-grey" type="submit" value="Regist"/></p>
-            </table>
-		</form>
-    </div>
-    </div>
 </section>
-
-
-
-
-<br/>
-
+ <p style="width:400px;margin:auto; font-size:2em; padding:0.5em;">Return to the <a href = "index.jsp">Enter Page</a></p>
 
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
   <h4><a href = "./aboutUs.jsp">About us</a></h4>
@@ -105,3 +96,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </body>
 
 </html>
+  
+

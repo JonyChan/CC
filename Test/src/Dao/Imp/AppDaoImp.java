@@ -21,14 +21,13 @@ public class AppDaoImp implements AppDao {
 		Connection conn = null;
 		try {
 			conn = JdbcUtils.getConn();
-			String sql = "insert into app values(?,?,?,?,?)";
+			String sql = "insert into app values(?,?,?)";
 			ps = conn.prepareStatement(sql);
 			
 			ps.setString(1, a.getAppname());
 			ps.setString(2, a.getAppdescri());
-			ps.setString(3, a.getWarpath());
-			ps.setString(4, a.getIconpath());
-			ps.setString(5, a.getProvider());
+			
+			ps.setString(3, a.getProvider());
 			
 			ps.executeUpdate();
 			
@@ -63,8 +62,6 @@ public class AppDaoImp implements AppDao {
 				a = new app();
 				a.setAppname(rs.getString("appname"));
 				a.setAppdescri(rs.getString("appdescri"));
-				a.setWarpath(rs.getString("warpath"));
-				a.setIconpath(rs.getString("iconpath"));
 				a.setProvider(rs.getString("provider"));
 				
 				list.add(a);

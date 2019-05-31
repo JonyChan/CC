@@ -91,9 +91,9 @@ public class warUpload extends HttpServlet {
                         File storeFile = new File(filePath);
 //                        FileUtils.moveFile(new File(filePath), new File("/Users/chenxu/lib/apache-tomcat-8.5.39/webapps"+File.separator+fileName));
                       
-                        String newFilePath = "/Users/chenxu/lib/apache-tomcat-8.5.39/webapps"+File.separator+fileName;
-                        //这个路径已经包含了图片名称，放到file对象中保存。
-                       
+//                        String newFilePath = "/Users/chenxu/lib/apache-tomcat-8.5.39/webapps"+File.separator+fileName;
+                        
+                        String newFilePath = "/var/lib/tomcat8/webapps"+File.separator+fileName;
                         File newstoreFile = new File(newFilePath);
                         
 

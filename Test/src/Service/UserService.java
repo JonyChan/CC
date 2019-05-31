@@ -8,4 +8,5 @@ public interface UserService {
 	public void regist(user u);
 	boolean check(String name);
 	public void changePassword(user u);
+	public user selectOne(String name);
 }

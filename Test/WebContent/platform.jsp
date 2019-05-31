@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <% if(session.getAttribute("abc")==null){ %>
  	href="login.jsp"
  	<%}else {%>
- 	href = "/Test/jsp/bank/wallet.jsp"
+ 	href = "/Test/jsp/showMo"
  	<%} %> 
       
       class="w3-button w3-block">Wallet</a>
@@ -81,10 +81,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- Slideshow -->
-  <img src="./image/Diamond.jpg" width="1100" height="500"/>
+<!--   <img src="./image/Diamond.jpg" width="1100" height="300"/>
+ -->    
+     <img src="./image/Diamond.jpg" width="100%" height="auto"/>
+ 
     
-    
-   <div class="w3-row-padding" id="about">
+   <div class="w3-row-padding" id="about" style="overflow:auto;">
     <div class="w3-center w3-padding-64">
       <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">They are our applications!</span>
     </div>
@@ -106,25 +108,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 List<app> list = (List<app>)request.getAttribute("applist");
 for(app a:list){
 %>
-    <div class="w3-third w3-margin-bottom">
+    
+     <div class="w3-third w3-margin-bottom">
       <div class="w3-card-4">
-       
-        <div class="w3-container">
-          <h3><%=a.getAppname() %></h3>
-          <p class="w3-opacity"><%=a.getProvider() %></p>
+        <div class="w3-container" style="height: 260px;">
+          <h3 style="width:50%;"><%=a.getAppname() %></h3>
+          <span style="width:50%; margin: 2em;"><img src="./image/app.png" align = "right"  width="100px" height="100px;"></span >
+          <p class="w3-opacity" ><%=a.getProvider() %></p>
           <p><%=a.getAppdescri() %></p>
-          <p><button class="w3-button w3-light-grey w3-block"><a 
-          <% if(session.getAttribute("abc")==null){ %>
- 			href="login.jsp"
+          
+          <form <% if(session.getAttribute("abc")==null){ %>
+ 			action = "/Test/login.jsp"
  			<%}else {%>
- 			href = "http://localhost:8080/<%=a.getAppname() %>/app"
+ 			action = "/Test/charge"
+ 			
+ 			>
  			<%} %> 
-          >enter</a> </button></p>
+ 			<table align = "center">
+ 			<input type = "hidden" name = "appname" value = "<%=a.getAppname() %>">
+ 			
+          <input type = "submit"  name = "enter" value = "enter" align = "center">
+          </table>
+          
         </div>
       </div>
     </div>
+    </form>
           <%} %>
-   
+   </div>
     <br></br>
     </br>
     </br></br></br></br></br></br></br></br></br></br></br>

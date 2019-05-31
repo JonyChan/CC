@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" import = "java.util.*"
     pageEncoding="UTF-8"%>
-<%@page import="entity.app" %>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -16,68 +16,55 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Test/css/TEST.css">
     <style>
-    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-    .mySlides {display:none}
+    html,body,h1,h2,h3,h4,h5 {font-family:"Lato", sans-serif}
     .w3-tag, .fa {cursor:pointer}
     .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
     </style>
-<body style="text-decoration:none">
-  <!-- Links (sit on top) -->
-<!-- <div class="w3-top">
-  <div class="w3-row w3-large w3-light-grey">
-    <div class="w3-col s3">
-      <a href="platform.jsp" class="w3-button w3-block">Home</a>
-    </div>
-    <div class="w3-col s3 ">
-      <a href="login.jsp" class="w3-button w3-block">Account</a>     
-    </div>
-    <div class="w3-col s3">
-      <a href="wallet.jsp" class="w3-button w3-block">Wallet</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="upload.jsp" class="w3-button w3-block">Upload</a>
-    </div>
-  </div>
-</div> -->
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  position: relative;
+    min-height: 100%;
+    background: url(./image/Diamond1.jpg) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
 
-</head>
+}
+.inner{
+    height:700px;
+    background: rgba(0,0,0,.2);
+}
 
-<!-- Content -->
-<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+</style>
+<body>
 
-  <div class="w3-panel">
-    <h1><b>Sheffield CloudBase</b></h1>
-    <p>Platform-as-a-Service</p>
-  </div>
-   <div class="w3-row-padding" id="about">
-    <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><a href = "/Test/showApp">Enter platform</a></span>
-    </div>
+<div class="bgimg">
+<header class="inner w3-display-container w3-content" style="max-width:1500px;">
   
-  <!-- Slideshow -->
-  <!-- <img src="./image/Diamond.jpg" width="1140" height="600"/> -->
-<header class="w3-display-container w3-content" style="max-width:1500px;">
-  <img class="w3-image" src="/Test/image/Diamond.jpg" alt="The Hotel" style="min-width:1000px" width="20000" height="800">
- </header>    
+  <div class="w3-padding w3-col l6 m8">
+    <div class="w3-black"><div style="left: 10%; position: absolute; top: 100px">
+      <h2>Sheffield CloudBase</h2>
+      <p>Platform-as-a-Service</p></div>
+    </div>
     
-  
+    <div style="right: 13%; position: absolute; color:white; top: 240px;font-size:30px;padding:0.5em;">
+    <div >Welcome to Team12</div><br/>
+    First, please read the <a href = "/Test/userGuide.jsp">user guide</a>
+    
+  </div>
+  <div style="right: 17%; position: absolute; color:white; top: 450px;font-size:30px;padding:0.5em;">
+    
+      <div class="">Then, Please <a href = "/Test/showApp"> Enter platform</a></div>
+   </div>
+</header>
+  </div>
 
-    <br></br>
-    </br>
-    </br></br></br></br></br></br></br></br></br></br></br>
-<!-- Footer -->
 
-<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>About us</h4>
-  <h6>Team member: JinKun Li, Xu Chen, ShengQi Li, ShiQi Yan</h6>
-  
-  
-  
-  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  
-  <p>Powered by <a target="_blank" class="w3-hover-text-green">Team 12</a></p>
-</footer>
 
 
 </body>
